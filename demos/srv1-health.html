@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<Title>Server Health Report: SRV1</Title>
+<style>
+h2 {
+width:95%;
+background-color:#7BA7C7;
+font-family:Tahoma;
+font-size:10pt;
+font-color:Black;
+}
+body { background-color:#FFFFFF;
+       font-family:Tahoma;
+       font-size:10pt; }
+td, th { border:1px solid black;
+         border-collapse:collapse; }
+th { color:white;
+     background-color:black; }
+table, tr, td, th { padding: 2px; margin: 0px }
+tr:nth-child(odd) {background-color: lightgray}
+table { width:95%;margin-left:5px; margin-bottom:20px;}
+.alert {background-color: red ! important}
+.warn {background-color: yellow ! important}
+</style>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'>
+</script>
+<script type='text/javascript'>
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+function toggleAll() {
+    var divs = document.getElementsByTagName('div');
+    for (var i = 0; i < divs.length; i++) {
+        var div = divs[i];
+        $("#"+div.id).toggle();
+    }
+}
+</script>
+<br>
+<H1>Server Health Report: SRV1</H1>
+</head><body>
+<a href='javascript:toggleAll();' title='Click to toggle all sections'>+/-</a>
+<a href='javascript:toggleDiv("Operating_System");' title='click to collapse or expand this section'><h2>Operating System</h2></a><div id="Operating_System">
+<table>
+<colgroup><col/><col/><col/><col/><col/></colgroup>
+<tr><th>Computername</th><th>Operating System</th><th>Service Pack</th><th>LastBootUpTime</th><th>Uptime</th></tr>
+<tr><td>SRV1</td><td>Microsoft Windows Server 2016 Standard Evaluation</td><td></td><td>6/4/2021 9:59:32 AM</td><td>04:30:22.8368149</td></tr>
+</table>
+</div>
+<a href='javascript:toggleDiv("Memory_Usage");' title='click to collapse or expand this section'><h2>Memory Usage</h2></a><div id="Memory_Usage">
+<table><colgroup><col /><col /><col /><col /><col /><col /></colgroup><tr><th>TotalMemoryMB</th><th>FreeMemoryMB</th><th>PercentFreeMemory</th><th>TotalVirtualMemoryMB</th><th>FreeVirtualMemoryMB</th><th>PercentFreeVirtualMemory</th></tr><tr><td>1</td><td>0.46</td><td>45.83</td><td>1</td><td>0.8</td><td>57.95</td></tr></table>
+</div>
+<a href='javascript:toggleDiv("Top_25_Processes");' title='click to collapse or expand this section'><h2>Top 25 Processes</h2></a><div id="Top_25_Processes">
+<table>
+<colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<tr><th>ProcessID</th><th>Name</th><th>HandleCount</th><th>WS(MB)</th><th>VS(MB)</th><th>CommandLine</th><th>CreationDate</th><th>Runtime</th></tr>
+<tr><td>1616</td><td>MsMpEng.exe</td><td>402</td><td>141.2617</td><td>2097670.5195</td><td></td><td>6/4/2021 9:59:35 AM</td><td>04:30:19.6874949</td></tr>
+<tr><td>1008</td><td>svchost.exe</td><td>1402</td><td>30.4219</td><td>2097368.9805</td><td>C:\Windows\system32\svchost.exe -k netsvcs</td><td>6/4/2021 9:59:34 AM</td><td>04:30:21.4264779</td></tr>
+<tr><td>972</td><td>svchost.exe</td><td>967</td><td>27.9766</td><td>2097292.7773</td><td>C:\Windows\system32\svchost.exe -k NetworkService</td><td>6/4/2021 9:59:34 AM</td><td>04:30:21.4352869</td></tr>
+<tr><td>1640</td><td>vmms.exe</td><td>484</td><td>23.3398</td><td>2097273.5352</td><td>C:\Windows\system32\vmms.exe</td><td>6/4/2021 9:59:36 AM</td><td>04:30:19.6799669</td></tr>
+<tr><td>516</td><td>lsass.exe</td><td>892</td><td>14.418</td><td>2097196.8203</td><td>C:\Windows\system32\lsass.exe</td><td>6/4/2021 9:59:33 AM</td><td>04:30:22.1229489</td></tr>
+<tr><td>1108</td><td>svchost.exe</td><td>395</td><td>14.3633</td><td>2097227.2148</td><td>C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork</td><td>6/4/2021 9:59:35 AM</td><td>04:30:20.0674579</td></tr>
+<tr><td>1516</td><td>svchost.exe</td><td>324</td><td>14.0273</td><td>2097240.2188</td><td>C:\Windows\System32\svchost.exe -k utcsvc</td><td>6/4/2021 9:59:35 AM</td><td>04:30:19.7339879</td></tr>
+<tr><td>760</td><td>svchost.exe</td><td>399</td><td>13.9453</td><td>2097217.8438</td><td>C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted</td><td>6/4/2021 9:59:33 AM</td><td>04:30:21.6902039</td></tr>
+<tr><td>924</td><td>svchost.exe</td><td>292</td><td>12.9805</td><td>2097259.5391</td><td>C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted</td><td>6/4/2021 9:59:34 AM</td><td>04:30:21.4567989</td></tr>
+<tr><td>1548</td><td>WmiPrvSE.exe</td><td>320</td><td>12.8828</td><td>2097203.2734</td><td>C:\Windows\system32\wbem\wmiprvse.exe</td><td>6/4/2021 9:59:36 AM</td><td>04:30:18.9333089</td></tr>
+<tr><td>388</td><td>sppsvc.exe</td><td>195</td><td>12.5703</td><td>2097200.2188</td><td></td><td>6/4/2021 2:29:40 PM</td><td>00:00:15.6304409</td></tr>
+<tr><td>812</td><td>svchost.exe</td><td>438</td><td>12.5391</td><td>2097209.6758</td><td>C:\Windows\system32\svchost.exe -k LocalService</td><td>6/4/2021 9:59:34 AM</td><td>04:30:21.6442989</td></tr>
+<tr><td>720</td><td>LogonUI.exe</td><td>256</td><td>12.2148</td><td>2097203.4102</td><td>&quot;LogonUI.exe&quot; /flags:0x0 /state0:0xa3b9a855 /state1:0x41c64e6d</td><td>6/4/2021 9:59:33 AM</td><td>04:30:21.7473239</td></tr>
+<tr><td>880</td><td>svchost.exe</td><td>357</td><td>10.7656</td><td>2097238.3516</td><td>C:\Windows\System32\svchost.exe -k termsvcs</td><td>6/4/2021 9:59:34 AM</td><td>04:30:21.5061219</td></tr>
+<tr><td>592</td><td>svchost.exe</td><td>382</td><td>10.4531</td><td>2097197.8281</td><td>C:\Windows\system32\svchost.exe -k DcomLaunch</td><td>6/4/2021 9:59:33 AM</td><td>04:30:21.9503129</td></tr>
+<tr><td>648</td><td>WmiPrvSE.exe</td><td>173</td><td>10.0078</td><td>2097195.5117</td><td>C:\Windows\system32\wbem\wmiprvse.exe</td><td>6/4/2021 2:29:38 PM</td><td>00:00:16.8907769</td></tr>
+<tr><td>2860</td><td>MpCmdRun.exe</td><td>221</td><td>9.9375</td><td>2097196.1758</td><td>&quot;C:\Program Files\Windows Defender\\MpCmdRun.exe&quot; SpyNetServiceDss -RestrictPrivileges -AccessKey DED6869D-5B30-4627-60F6-B9E016018D5A -Reinvoke</td><td>6/4/2021 9:59:44 AM</td><td>04:30:11.1106639</td></tr>
+<tr><td>860</td><td>svchost.exe</td><td>265</td><td>9.6445</td><td>2097209.1445</td><td>C:\Windows\system32\svchost.exe -k ICService</td><td>6/4/2021 9:59:34 AM</td><td>04:30:21.5594429</td></tr>
+<tr><td>2308</td><td>msdtc.exe</td><td>188</td><td>9.5078</td><td>2097198.6875</td><td>C:\Windows\System32\msdtc.exe</td><td>6/4/2021 10:01:36 AM</td><td>04:28:19.2814009</td></tr>
+<tr><td>628</td><td>svchost.exe</td><td>359</td><td>8.9297</td><td>2097192.4844</td><td>C:\Windows\system32\svchost.exe -k RPCSS</td><td>6/4/2021 9:59:33 AM</td><td>04:30:21.8300359</td></tr>
+<tr><td>1560</td><td>svchost.exe</td><td>192</td><td>7.5781</td><td>2097186.3086</td><td>C:\Windows\System32\svchost.exe -k smbsvcs</td><td>6/4/2021 9:59:35 AM</td><td>04:30:19.7167739</td></tr>
+<tr><td>1116</td><td>VSSVC.exe</td><td>121</td><td>7.2461</td><td>2097187.8125</td><td>C:\Windows\system32\vssvc.exe</td><td>6/4/2021 9:59:35 AM</td><td>04:30:20.0655669</td></tr>
+<tr><td>2360</td><td>vmcompute.exe</td><td>122</td><td>7.207</td><td>2097187.9414</td><td>C:\Windows\system32\vmcompute.exe</td><td>6/4/2021 9:59:40 AM</td><td>04:30:14.8472429</td></tr>
+<tr><td>828</td><td>conhost.exe</td><td>107</td><td>7.0625</td><td>2097235.3125</td><td>\??\C:\Windows\system32\conhost.exe 0x4</td><td>6/4/2021 9:59:34 AM</td><td>04:30:21.6361069</td></tr>
+<tr><td>392</td><td>csrss.exe</td><td>123</td><td>6.8945</td><td>2097196.9609</td><td></td><td>6/4/2021 9:59:33 AM</td><td>04:30:22.2535549</td></tr>
+</table>
+</div>
+<a href='javascript:toggleDiv("Drive_Utilization");' title='click to collapse or expand this section'><h2>Drive Utilization</h2></a><div id="Drive_Utilization">
+<table><colgroup><col /><col /><col /><col /></colgroup><tr><th>DeviceID</th><th>SizeGB</th><th>FreeGB</th><th>PercentFree</th></tr><tr><td>C:</td><td>127</td><td>118.8801</td><td>93.89</td></tr></table>
+</div>
+<a href='javascript:toggleDiv("Event_Logs");' title='click to collapse or expand this section'><h2>Event Logs</h2></a><div id="Event_Logs">
+<h3>Security</h3>
+<p style='color:green;'>No recent audit failures</p>
+<h3>Application</h3>
+<table><colgroup><col /><col /><col /><col /><col /></colgroup><tr><th>TimeGenerated</th><th>Type</th><th>EventCode</th><th>SourceName</th><th>Message</th></tr><tr class="alert"><td>6/4/2021 9:59:46 AM</td><td>Error</td><td>6</td><td>Microsoft-Windows-CertificateServicesClient-AutoEnrollment</td><td>Automatic certificate enrollment for local system failed (0x80094012) The permissions on the certificate template do not allow the current user to enroll for this type of certificate.
+.</td></tr><tr class="alert"><td>6/4/2021 9:59:46 AM</td><td>Error</td><td>13</td><td>Microsoft-Windows-CertificateServicesClient-CertEnroll</td><td>Certificate enrollment for Local system failed to enroll for a WebServer2 certificate with request ID 40 from DOM1.Company.Pri\Company.Pri (The permissions on the certificate template do not allow the current user to enroll for this type of certificate. 0x80094012 (-2146877422 CERTSRV_E_TEMPLATE_DENIED)).</td></tr><tr class="alert"><td>6/4/2021 9:59:45 AM</td><td>Error</td><td>6</td><td>Microsoft-Windows-CertificateServicesClient-AutoEnrollment</td><td>Automatic certificate enrollment for local system failed (0x80094012) The permissions on the certificate template do not allow the current user to enroll for this type of certificate.
+.</td></tr><tr class="alert"><td>6/4/2021 9:59:45 AM</td><td>Error</td><td>13</td><td>Microsoft-Windows-CertificateServicesClient-CertEnroll</td><td>Certificate enrollment for Local system failed to enroll for a WebServer2 certificate with request ID 39 from DOM1.Company.Pri\Company.Pri (The permissions on the certificate template do not allow the current user to enroll for this type of certificate. 0x80094012 (-2146877422 CERTSRV_E_TEMPLATE_DENIED)).</td></tr><tr class="alert"><td>6/4/2021 4:04:30 AM</td><td>Error</td><td>257</td><td>Microsoft-Windows-Defrag</td><td>The volume (C:) was not optimized because an error was encountered: Neither Slab Consolidation nor Slab Analysis will run if slabs are less than 8 MB. (0x8900002D)</td></tr><tr class="alert"><td>6/4/2021 3:54:36 AM</td><td>Error</td><td>6</td><td>Microsoft-Windows-CertificateServicesClient-AutoEnrollment</td><td>Automatic certificate enrollment for local system failed (0x80094012) The permissions on the certificate template do not allow the current user to enroll for this type of certificate.
+.</td></tr><tr class="alert"><td>6/4/2021 3:54:36 AM</td><td>Error</td><td>13</td><td>Microsoft-Windows-CertificateServicesClient-CertEnroll</td><td>Certificate enrollment for Local system failed to enroll for a WebServer2 certificate with request ID 36 from DOM1.Company.Pri\Company.Pri (The permissions on the certificate template do not allow the current user to enroll for this type of certificate. 0x80094012 (-2146877422 CERTSRV_E_TEMPLATE_DENIED)).</td></tr></table>
+<h3>System</h3>
+<table><colgroup><col /><col /><col /><col /><col /></colgroup><tr><th>TimeGenerated</th><th>Type</th><th>EventCode</th><th>SourceName</th><th>Message</th></tr><tr class="warn"><td>6/4/2021 9:59:36 AM</td><td>Warning</td><td>10154</td><td>Microsoft-Windows-WinRM</td><td>The WinRM service failed to create the following SPNs: WSMAN/SRV1.Company.Pri; WSMAN/SRV1. 
+
+ Additional Data 
+ The error received was 1355: %%1355.
+
+ User Action 
+ The SPNs can be created by an administrator using setspn.exe utility.</td></tr><tr class="alert"><td>6/4/2021 9:59:35 AM</td><td>Error</td><td>5719</td><td>NETLOGON</td><td>This computer was not able to set up a secure session with a domain controller in domain COMPANY due to the following: 
+There are currently no logon servers available to service the logon request. 
+This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.  
+
+ADDITIONAL INFO 
+If this computer is a domain controller for the specified domain, it sets up the secure session to the primary domain controller emulator in the specified domain. Otherwise, this computer sets up the secure session to any domain controller in the specified domain.</td></tr><tr class="alert"><td>6/4/2021 9:59:35 AM</td><td>Error</td><td>7000</td><td>Service Control Manager</td><td>The VMSP service failed to start due to the following error: 
+A device attached to the system is not functioning.</td></tr><tr class="warn"><td>6/4/2021 9:59:27 AM</td><td>Warning</td><td>10149</td><td>Microsoft-Windows-WinRM</td><td>The WinRM service is not listening for WS-Management requests. 
+
+ User Action 
+ If you did not intentionally stop the service, use the following command to see the WinRM configuration: 
+
+ winrm enumerate winrm/config/listener</td></tr><tr class="warn"><td>6/4/2021 3:54:25 AM</td><td>Warning</td><td>10154</td><td>Microsoft-Windows-WinRM</td><td>The WinRM service failed to create the following SPNs: WSMAN/SRV1.Company.Pri; WSMAN/SRV1. 
+
+ Additional Data 
+ The error received was 1355: %%1355.
+
+ User Action 
+ The SPNs can be created by an administrator using setspn.exe utility.</td></tr><tr class="alert"><td>6/4/2021 3:54:25 AM</td><td>Error</td><td>5719</td><td>NETLOGON</td><td>This computer was not able to set up a secure session with a domain controller in domain COMPANY due to the following: 
+There are currently no logon servers available to service the logon request. 
+This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.  
+
+ADDITIONAL INFO 
+If this computer is a domain controller for the specified domain, it sets up the secure session to the primary domain controller emulator in the specified domain. Otherwise, this computer sets up the secure session to any domain controller in the specified domain.</td></tr></table>
+<h3>Windows PowerShell</h3>
+<p style='color:green;'>No recent errors or warnings</p>
+</div>
+<a href='javascript:toggleDiv("Services");' title='click to collapse or expand this section'><h2>Services</h2></a><div id="Services">
+<table>
+<colgroup><col/><col/><col/><col/></colgroup>
+<tr><th>Name</th><th>Displayname</th><th>Description</th><th>State</th></tr>
+<tr><td>RemoteRegistry</td><td>Remote Registry</td><td>Enables remote users to modify registry settings on this computer. If this service is stopped, the registry can be modified only by users on this computer. If this service is disabled, any services that explicitly depend on it will fail to start.</td><td>Stopped</td></tr>
+</table>
+</div>
+<a href='javascript:toggleDiv("Installed_Windows_Features");' title='click to collapse or expand this section'><h2>Installed Windows Features</h2></a><div id="Installed_Windows_Features">
+<table>
+<colgroup><col/><col/><col/></colgroup>
+<tr><th>DisplayName</th><th>Name</th><th>Description</th></tr>
+<tr><td>Containers</td><td>Containers</td><td>Provides services and tools to create and manage Windows Server Containers and their resources.</td></tr>
+<tr><td>File and Storage Services</td><td>FileAndStorage-Services</td><td>File and Storage Services includes services that are always installed, as well as functionality that you can install to help manage file servers and storage.</td></tr>
+<tr><td>File and iSCSI Services</td><td>File-Services</td><td>File and iSCSI Services provides technologies that help you manage file servers and storage, reduce disk space utilization, replicate and cache files to branch offices, move or fail over a file share to another cluster node, and share files by using the NFS protocol.</td></tr>
+<tr><td>File Server</td><td>FS-FileServer</td><td>File Server manages shared folders and enables users to access files on this computer from the network.</td></tr>
+<tr><td>SMB 1.0/CIFS File Sharing Support</td><td>FS-SMB1</td><td>Support for the SMB 1.0/CIFS file sharing protocol, and the Computer Browser protocol.</td></tr>
+<tr><td>.NET Framework 4.6</td><td>NET-Framework-45-Core</td><td>.NET Framework 4.6 provides a comprehensive and consistent programming model for quickly and easily building and running applications that are built for various platforms including desktop PCs, Servers, smart phones and the public and private cloud.</td></tr>
+<tr><td>.NET Framework 4.6 Features</td><td>NET-Framework-45-Features</td><td>.NET Framework 4.6 provides a comprehensive and consistent programming model for quickly and easily building and running applications that are built for various platforms including desktop PCs, Servers, smart phones and the public and private cloud.</td></tr>
+<tr><td>.NET Framework 3.5 (includes .NET 2.0 and 3.0)</td><td>NET-Framework-Core</td><td>.NET Framework 3.5 combines the power of the .NET Framework 2.0 APIs with new technologies for building applications that offer appealing user interfaces, protect your customers&#39; personal identity information, enable seamless and secure communication, and provide the ability to model a range of business processes.</td></tr>
+<tr><td>.NET Framework 3.5 Features</td><td>NET-Framework-Features</td><td>.NET Framework 3.5 combines the power of the .NET Framework 2.0 APIs with new technologies for building applications that offer appealing user interfaces, protect your customers&#39; personal identity information, enable seamless and secure communication, and provide the ability to model a range of business processes.</td></tr>
+<tr><td>WCF Services</td><td>NET-WCF-Services45</td><td>Windows Communication Foundation (WCF) Activation uses Windows Process Activation Service to invoke applications remotely over the network by using protocols such as HTTP, Message Queuing, TCP, and named pipes. Consequently, applications can start and stop dynamically in response to incoming work items, resulting in application hosting that is more robust, manageable, and efficient.</td></tr>
+<tr><td>TCP Port Sharing</td><td>NET-WCF-TCP-PortSharing45</td><td>TCP Port Sharing allows multiple net.tcp applications to share a single TCP port. Consequently, these applications can coexist on the same physical computer in separate, isolated processes, while sharing the network infrastructure required to send and receive traffic over a TCP port, such as port 808.</td></tr>
+<tr><td>Windows PowerShell 5.1</td><td>PowerShell</td><td>Windows PowerShell enables you to automate local and remote Windows administration. This task-based command-line shell and scripting language is built on the Microsoft .NET Framework. It includes hundreds of built-in commands and lets you write and distribute your own commands and scripts.</td></tr>
+<tr><td>Windows PowerShell</td><td>PowerShellRoot</td><td>Windows PowerShell enables you to automate local and remote Windows administration. This task-based command-line shell and scripting language is built on the Microsoft .NET Framework. It includes hundreds of built-in commands and lets you write and distribute your own commands and scripts.</td></tr>
+<tr><td>Windows PowerShell 2.0 Engine</td><td>PowerShell-V2</td><td>Windows PowerShell 2.0 Engine includes the core components from Windows PowerShell 2.0 for backward compatibility with existing Windows PowerShell host applications.</td></tr>
+<tr><td>Storage Services</td><td>Storage-Services</td><td>Storage Services provides storage management functionality that is always installed and cannot be removed.</td></tr>
+<tr><td>Windows Defender</td><td>Windows-Defender</td><td>Windows Defender helps protect your machine from malware.</td></tr>
+<tr><td>Windows Defender Features</td><td>Windows-Defender-Features</td><td>Windows Defender helps protect your machine from malware.</td></tr>
+<tr><td>Windows Server Backup</td><td>Windows-Server-Backup</td><td>Windows Server Backup allows you to back up and recover your operating system, applications and data. You can schedule backups, and protect the entire server or specific volumes.</td></tr>
+<tr><td>WoW64 Support</td><td>WoW64-Support</td><td>Includes all of WoW64 to support running 32-bit applications on Server Core installations.  This feature is required for full Server installations. Uninstalling WoW64 Support will convert a full Server installation into a Server Core installation.</td></tr>
+</table>
+</div>
+<br><i>Created 06/04/2021 14:29:57</i>
+<table>
+</table>
+</body></html>
