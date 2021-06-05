@@ -123,7 +123,7 @@ $feat[0..20] | Format-Table -view Report
 #You can always pare down with property sets and custom format files.
 psedit .\Get-FeatureInventory.ps1
 
-.\Get-FeatureInventory.ps1
+. .\Get-FeatureInventory.ps1
 $inv = Get-FeatureInventory srv1
 $inv[0..10] | Select-Object *
 $inv | Get-Member
@@ -141,9 +141,16 @@ $inv | Sort-Object type| Format-Table -view featuretype | more
 
 #read the help!
 
-$inv | Convertto-html -Title "Server Feature Inventory" -PreContent "<H1>
-SRV1</H1>" -Property Feature,Installed,InstallState,Description -PostContent "<H5>Report by $($inv[0].ReportedBy) on $($
-inv[0].Report)</H5>" -CssUri .\Alternating.css | out-file .\basic-inventory.html
+#I decided to use splatting for ConvertTo-HTML to make it easier to read
+$conv = @{
+    Title = "Server Feature Inventory"
+    PreContent = "<H1>SRV1</H1>"
+    Property = "Feature","Installed","InstallState","Description"
+    PostContent = "<H5>Report by $($inv[0].ReportedBy) on $($inv[0].Report)</H5>"
+    CssUri = ".\Alternating.css"
+}
+
+$inv | Convertto-html @conv | Out-File .\basic-inventory.html
 
 Invoke-Item .\basic-inventory.html
 
@@ -166,6 +173,7 @@ Invoke-Item .\hv.html
 
 Get-Command -module ADReportingTools
 Get-ADSummary
+#this should be run in the console
 Show-DomainTree
 Get-ADbranch "OU=IT,DC=Company,DC=pri"
 

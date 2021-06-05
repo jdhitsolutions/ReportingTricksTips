@@ -12,9 +12,11 @@ It doesn't matter if you are using PowerShell to check on processes running on s
 
 You will want to install these modules from the PowerShell Gallery if you want to try the demonstrations yourself.
 
-- PSScriptingTools
-- ADReportingTools
+- [PSScriptingTools](https://github.com/jdhitsolutions/PSScriptTools)
+- [ADReportingTools](https://github.com/jdhitsolutions/ADReportingTools)
 
 ## Learn More
 
 <img src= images/PowerShell_Scripting_Toolmaking_thumb.jpg alt="PSScriptingToolmaking" align=left padding-right=25px;> When you are ready to learn more or expand your PowerShell scripting skills, you should grab a copy of [_The PowerShell Scripting & Toolmaking Book_](https://leanpub.com/powershell-scripting-toolmaking). This book, co-authored with Don Jones, is our attempt at writing the definitive guide to PowerShell scripting. Or if you feel you need to simply hone basic PowerShell master, grab a copy of [_The PowerShell Practice Primer_](https://leanpub.com/psprimer).
+
+If you are looking for more structured learning, I'm betting you'll find more than enough in the [Pluralsight catalog](https://pluralsight.pxf.io/qbR6n).
