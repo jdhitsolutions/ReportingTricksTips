@@ -2,7 +2,7 @@
 
 ![PowerShell](images/powershell-emoji.png)
 
-My presentation and demo material for my session that was part of the [PowerShell 1-Day Conference](https://petri.com/conferences/get-it-powershell-1-day-virtual-conference) from [Petri.com](https://petri.com/). Use the Discussion section of this repository for follow-up questions or comments.
+My presentation and demo material for my session that was part of the [PowerShell 1-Day Conference](https://petri.com/conferences/get-it-powershell-1-day-virtual-conference) from [Petri.com](https://petri.com/). Use the [Discussions](https://github.com/jdhitsolutions/ReportingTricksTips/discussions) section of this repository for follow-up questions or comments.
 
 ## Abstract
 
